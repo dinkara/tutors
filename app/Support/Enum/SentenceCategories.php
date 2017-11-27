@@ -4,7 +4,7 @@ namespace App\Support\Enum;
 
 class SentenceCategories
 {
-    const IMPRESSION = 'impression ';
+    const IMPRESSION = 'impression';
     const PARTICIPATION = 'participation';
     const ATTITUDE = 'attitude';
     const VOCABULARY = 'vocabulary';

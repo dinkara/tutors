@@ -14,8 +14,10 @@ class CategorySeeder extends Seeder
     {
         $categories = SentenceCategories::all();
         
-        foreach($categories as $category){
-            $repo->create(["name" => $category]);
+        $colors = ["danger", "primary", "info", "warning", "success", "link", "dark"];
+        
+        foreach($categories as $key => $category){
+            $repo->create(["name" => $category, "color" => $colors[$key]]);
         }
     }
 }
