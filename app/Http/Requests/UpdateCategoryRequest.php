@@ -17,6 +17,7 @@ class UpdateCategoryRequest extends ApiRequest
     {
         return [
 	    'name' => 'required',
+	    'color' => 'required',
 
         ];
     }

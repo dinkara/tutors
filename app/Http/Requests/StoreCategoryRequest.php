@@ -17,6 +17,7 @@ class StoreCategoryRequest extends ApiRequest
     {
         return [
 	    'name' => 'required',
+	    'color' => 'required',
 
         ];
     }
