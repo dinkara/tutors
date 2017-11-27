@@ -61,7 +61,6 @@ Route::middleware(['dinkoapi.auth', 'user.check.status'])->group(function (){
       ==================================*/
     Route::group(['prefix' => 'sentences'], function(){
 	Route::get('paginate', 'SentenceController@paginate');
-        Route::get('paginate/query', 'SentenceController@paginateWithQuery');
 	Route::post('{id}/categories/{category_id}', 'SentenceController@attachCategory');
 
 	Route::delete('{id}/categories/{category_id}', 'SentenceController@detachCategory');

@@ -6,7 +6,7 @@
 
 1.  Clone source to target machine
 
-        git clone https://github.com/dinkara/tutors.git
+        git clone {url to your git repository}
 
 
 
@@ -29,6 +29,7 @@
 5.  Install composer dependencies
 
         composer install
+
 
 6.  Run migrations
 

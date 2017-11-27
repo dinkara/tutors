@@ -43,4 +43,6 @@ class EloquentSentence extends EloquentRepo implements ISentenceRepo {
         return $this->finalize($this->model);
     }
 
+    
+
 }

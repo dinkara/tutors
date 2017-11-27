@@ -23,8 +23,8 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": quia (string),
-            "caption": et (string),
+            "text": sed (string),
+            "caption": vero (string),
             "favorite": 1 (boolean),
 
     }
@@ -52,9 +52,9 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": sed (string),
-            "caption": molestiae (string),
-            "favorite": 0 (boolean),
+            "text": asperiores (string),
+            "caption": placeat (string),
+            "favorite": 1 (boolean),
 
     }
 + Response 200 (application/json)
@@ -80,7 +80,7 @@
 <!-- include(response/401.md) -->
 <!-- include(response/404.md) -->
 <!-- include(response/500.md) -->
-### Get single item [DELETE]
+### Delete item [DELETE]
 <!-- include(parameters/id.md) -->
 + Request (application/json)
     <!-- include(request/header.md) -->    

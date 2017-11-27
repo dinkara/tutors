@@ -133,11 +133,10 @@ class AuthController extends ApiController {
         try {
             $user = Socialite::driver($network)->stateless()->user();
             
-        } catch (\Exception $e) {    
-            
-            return ApiResponse::Unauthorized(Lang::get($e->getMessage()));
+        } catch (\Exception $e) {            
+            return ApiResponse::Unauthorized(Lang::get('auth.invalid_access_token'));
         }           
-        
+                
         try{
             $socialData = ["access_token" => $user->token, "provider_id" => $user->id];
             

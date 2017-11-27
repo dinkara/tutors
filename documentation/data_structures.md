@@ -45,7 +45,7 @@
 
 ## Category (object)
 
-+ name: voluptatum (string)
++ name: omnis (string)
 
 
 
@@ -55,45 +55,47 @@
 
 ## Profile (object)
 
-+ name: voluptate (string)
++ name: ut (string)
 
-+ nick: velit (string)
++ nick: voluptas (string)
 
 
 
 ## Review (object)
 
-+ text: quaerat (string)
++ text: fugit (string)
 
-+ caption: non (string)
++ caption: nisi (string)
 
-+ favorite: 0 (boolean)
++ favorite: 1 (boolean)
 
 
 
 ## Role (object)
 
-+ name: quaerat (string)
++ name: id (string)
 
 
 
 ## Sentence (object)
 
-+ text: quia (string)
++ text: dolore (string)
+
++ color: impedit (string)
 
 
 
 ## SocialNetwork (object)
 
-+ name: nobis (string)
++ name: cum (string)
 
 
 
 ## Student (object)
 
-+ name: eligendi (string)
++ name: porro (string)
 
-+ nick: aliquam (string)
++ nick: facere (string)
 
 + gender: enum1 (enum)
 
@@ -101,11 +103,11 @@
 
 ## User (object)
 
-+ email: ipsa (string)
++ email: et (string)
 
-+ password_updated: 2017-11-23 14:12:33 (datetime)
++ password_updated: 2017-11-05 22:13:41 (datetime)
 
-+ last_login: 2017-11-14 14:12:33 (datetime)
++ last_login: 2017-11-04 22:13:41 (datetime)
 
 
 

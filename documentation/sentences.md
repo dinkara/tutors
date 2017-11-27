@@ -15,13 +15,15 @@
 + Request Rules:
     {
         "text": 'required',
+        "color": 'required',
 
     }
 + Request (application/json)
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": possimus (string),
+            "text": delectus (string),
+            "color": non (string),
 
     }
 + Response 201 (application/json)
@@ -40,13 +42,15 @@
 + Request Rules:
     {
         "text": 'required',
+        "color": 'required',
 
     }
 + Request (application/json)
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": et (string),
+            "text": est (string),
+            "color": quia (string),
 
     }
 + Response 200 (application/json)
@@ -72,7 +76,7 @@
 <!-- include(response/401.md) -->
 <!-- include(response/404.md) -->
 <!-- include(response/500.md) -->
-### Get single item [DELETE]
+### Delete item [DELETE]
 <!-- include(parameters/id.md) -->
 + Request (application/json)
     <!-- include(request/header.md) -->    

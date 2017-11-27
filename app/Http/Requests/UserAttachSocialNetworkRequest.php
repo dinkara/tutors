@@ -15,7 +15,7 @@ class UserAttachSocialNetworkRequest extends ApiRequest
     public function rules()
     {
 	return [
-	    'code' => 'required',
+	    'access_token' => 'required',
 
         ];
     }

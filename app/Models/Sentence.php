@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Dinkara\RepoBuilder\Traits\ApiModel;
+use Dinkara\DinkoApi\Traits\ApiModel;
 
 class Sentence extends Model
 {
@@ -18,21 +18,21 @@ class Sentence extends Model
      *
      * @var array
      */
-    protected $searchableColumns = ['text'];
+    protected $searchableColumns = ['text', 'color'];
     
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['user_id', 'text'];
+    protected $fillable = ['user_id', 'text', 'color'];
     
     /**
      * The attributes that are will be shown in transformer
      *
      * @var array
      */
-    protected $displayable = ['text'];
+    protected $displayable = ['text', 'color'];
     
     public $timestamps = true;
     

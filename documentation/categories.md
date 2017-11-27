@@ -21,7 +21,7 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "name": tempore (string),
+            "name": itaque (string),
 
     }
 + Response 201 (application/json)
@@ -46,7 +46,7 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "name": numquam (string),
+            "name": odio (string),
 
     }
 + Response 200 (application/json)
@@ -72,7 +72,7 @@
 <!-- include(response/401.md) -->
 <!-- include(response/404.md) -->
 <!-- include(response/500.md) -->
-### Get single item [DELETE]
+### Delete item [DELETE]
 <!-- include(parameters/id.md) -->
 + Request (application/json)
     <!-- include(request/header.md) -->    

@@ -14,6 +14,7 @@ interface ISentenceRepo extends IRepo {
     function attachCategory(Category $model, array $data = []);
 
 
-    function detachCategory(Category $model);   
+    function detachCategory(Category $model);
+
 
 }

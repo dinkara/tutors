@@ -23,8 +23,8 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "name": qui (string),
-            "nick": ipsam (string),
+            "name": voluptatem (string),
+            "nick": voluptatum (string),
             "gender": enum1 (enum),
 
     }
@@ -52,8 +52,8 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "name": dolores (string),
-            "nick": necessitatibus (string),
+            "name": laudantium (string),
+            "nick": sed (string),
             "gender": enum1 (enum),
 
     }
@@ -80,7 +80,7 @@
 <!-- include(response/401.md) -->
 <!-- include(response/404.md) -->
 <!-- include(response/500.md) -->
-### Get single item [DELETE]
+### Delete item [DELETE]
 <!-- include(parameters/id.md) -->
 + Request (application/json)
     <!-- include(request/header.md) -->    

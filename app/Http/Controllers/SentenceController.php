@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreSentenceRequest;
 use App\Http\Requests\UpdateSentenceRequest;
-use App\Http\Requests\SearchSentenceRequest;
 use App\Repositories\Sentence\ISentenceRepo;
 use App\Transformers\SentenceTransformer;
 use Tymon\JWTAuth\Facades\JWTAuth;
@@ -12,7 +11,7 @@ use Dinkara\DinkoApi\Http\Controllers\ResourceController;
 use ApiResponse;
 use App\Http\Requests\SentenceAttachCategoryRequest;
 use App\Repositories\Category\ICategoryRepo;
-use Illuminate\Http\Request;
+
 
 /**
  * @resource Sentence
@@ -39,8 +38,7 @@ class SentenceController extends ResourceController
 
     	$this->categoryRepo = $categoryRepo;
 
-    }    
-    
+    }
     
     /**
      * Create item
