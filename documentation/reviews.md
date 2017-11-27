@@ -23,8 +23,8 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": sed (string),
-            "caption": vero (string),
+            "text": nemo (string),
+            "caption": ducimus (string),
             "favorite": 1 (boolean),
 
     }
@@ -52,8 +52,8 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": asperiores (string),
-            "caption": placeat (string),
+            "text": facere (string),
+            "caption": est (string),
             "favorite": 1 (boolean),
 
     }

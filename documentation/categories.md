@@ -21,7 +21,7 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "name": itaque (string),
+            "name": sapiente (string),
 
     }
 + Response 201 (application/json)
@@ -46,7 +46,7 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "name": odio (string),
+            "name": earum (string),
 
     }
 + Response 200 (application/json)

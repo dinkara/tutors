@@ -22,8 +22,8 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": delectus (string),
-            "color": non (string),
+            "text": numquam (string),
+            "color": aut (string),
 
     }
 + Response 201 (application/json)
@@ -49,8 +49,8 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": est (string),
-            "color": quia (string),
+            "text": facilis (string),
+            "color": dicta (string),
 
     }
 + Response 200 (application/json)

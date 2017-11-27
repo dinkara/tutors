@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Dinkara\DinkoApi\Traits\ApiModel;
+use Dinkara\RepoBuilder\Traits\ApiModel;
 
 class Role extends Model
 {

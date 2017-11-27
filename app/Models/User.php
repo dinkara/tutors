@@ -3,7 +3,7 @@
 namespace App\Models;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Dinkara\DinkoApi\Traits\ApiModel;
+use Dinkara\RepoBuilder\Traits\ApiModel;
 
 class User extends Authenticatable
 {
