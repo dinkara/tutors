@@ -6,7 +6,7 @@
 
 1.  Clone source to target machine
 
-        git clone https://dzale@bitbucket.org/2xd90/tutors_api.git
+        git clone https://github.com/dinkara/tutors.git
 
 
 
