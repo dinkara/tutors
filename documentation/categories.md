@@ -15,13 +15,15 @@
 + Request Rules:
     {
         "name": 'required',
+        "color": 'required',
 
     }
 + Request (application/json)
     <!-- include(request/header.md) -->
     + Body
     {
-            "name": sapiente (string),
+            "name": maiores (string),
+            "color": itaque (string),
 
     }
 + Response 201 (application/json)
@@ -40,13 +42,15 @@
 + Request Rules:
     {
         "name": 'required',
+        "color": 'required',
 
     }
 + Request (application/json)
     <!-- include(request/header.md) -->
     + Body
     {
-            "name": earum (string),
+            "name": expedita (string),
+            "color": est (string),
 
     }
 + Response 200 (application/json)

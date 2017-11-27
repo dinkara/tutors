@@ -23,8 +23,8 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": nemo (string),
-            "caption": ducimus (string),
+            "text": dolores (string),
+            "caption": nisi (string),
             "favorite": 1 (boolean),
 
     }
@@ -52,8 +52,8 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": facere (string),
-            "caption": est (string),
+            "text": velit (string),
+            "caption": qui (string),
             "favorite": 1 (boolean),
 
     }

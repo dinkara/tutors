@@ -18,21 +18,21 @@ class Sentence extends Model
      *
      * @var array
      */
-    protected $searchableColumns = ['text', 'color'];
+    protected $searchableColumns = ['text'];
     
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['user_id', 'text', 'color'];
+    protected $fillable = ['user_id', 'text'];
     
     /**
      * The attributes that are will be shown in transformer
      *
      * @var array
      */
-    protected $displayable = ['text', 'color'];
+    protected $displayable = ['text'];
     
     public $timestamps = true;
     

@@ -15,15 +15,13 @@
 + Request Rules:
     {
         "text": 'required',
-        "color": 'required',
 
     }
 + Request (application/json)
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": numquam (string),
-            "color": aut (string),
+            "text": voluptatibus (string),
 
     }
 + Response 201 (application/json)
@@ -42,15 +40,13 @@
 + Request Rules:
     {
         "text": 'required',
-        "color": 'required',
 
     }
 + Request (application/json)
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": facilis (string),
-            "color": dicta (string),
+            "text": quas (string),
 
     }
 + Response 200 (application/json)

@@ -17,7 +17,6 @@ class StoreSentenceRequest extends ApiRequest
     {
         return [
 	    'text' => 'required',
-	    'color' => 'required',
 
         ];
     }

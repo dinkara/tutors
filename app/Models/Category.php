@@ -18,21 +18,21 @@ class Category extends Model
      *
      * @var array
      */
-    protected $searchableColumns = ['name'];
+    protected $searchableColumns = ['name', 'color'];
     
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'color'];
     
     /**
      * The attributes that are will be shown in transformer
      *
      * @var array
      */
-    protected $displayable = ['name'];
+    protected $displayable = ['name', 'color'];
     
     public $timestamps = true;
     
