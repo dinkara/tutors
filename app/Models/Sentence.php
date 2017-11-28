@@ -18,7 +18,7 @@ class Sentence extends Model
      *
      * @var array
      */
-    protected $searchableColumns = ['text'];
+    protected $searchableColumns = ['text' => 15];
     
     /**
      * The attributes that are mass assignable.
