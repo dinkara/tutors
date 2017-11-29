@@ -10,6 +10,7 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 use Dinkara\DinkoApi\Http\Controllers\ResourceController;
 use ApiResponse;
 use App\Http\Requests\ReviewAttachSentenceRequest;
+use App\Http\Requests\ReviewAttachSentencesRequest;
 use App\Repositories\Sentence\ISentenceRepo;
 
 
@@ -92,6 +93,30 @@ class ReviewController extends ResourceController
             return ApiResponse::ItemAttached($this->repo->find($id)->attachSentence($model, $data)->getModel(), $this->transformer);
     }
 
+    
+     /**
+     * Attach Multiple Sentences
+     *
+     * Attach multiple sentences to existing resource.
+     *
+     * @param  App\Http\Requests\ReviewAttachSentenceRequest  $request
+     * @param  int  $id     
+     * @return \Illuminate\Http\Response
+     */
+    public function attachSentences(ReviewAttachSentencesRequest $request, $id)
+    {
+            $data = $request->only("sentences");
+	    	            
+            $review = $this->repo->find($id);
+            
+            foreach($data["sentences"] as $sentence){                
+                $model = $this->sentenceRepo->find($sentence["id"])->getModel();
+                unset($sentence["id"]);
+                $review->attachSentence($model, $sentence);
+            }	    
+            
+            return ApiResponse::ItemAttached($review->getModel(), $this->transformer);
+    }
     
     /**
      * Detach Sentence

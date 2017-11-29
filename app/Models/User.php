@@ -68,7 +68,7 @@ class User extends Authenticatable
     }
     public function reviews()
     {
-        return $this->hasMany('App\Models\Review', 'user_id');
+        return $this->hasMany('App\Models\Review', 'user_id')->orderBy('created_at', 'desc');
     }
     public function students()
     {

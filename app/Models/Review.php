@@ -32,7 +32,7 @@ class Review extends Model
      *
      * @var array
      */
-    protected $displayable = ['text', 'caption', 'favorite'];
+    protected $displayable = ['text', 'caption', 'favorite', 'created_at'];
     
     public $timestamps = true;
     

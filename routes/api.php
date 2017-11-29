@@ -40,6 +40,7 @@ Route::middleware(['dinkoapi.auth', 'user.check.status'])->group(function (){
       ==================================*/
     Route::group(['prefix' => 'reviews'], function(){
 	Route::get('paginate', 'ReviewController@paginate');
+        Route::post('{id}/sentences', 'ReviewController@attachSentences');
 	Route::post('{id}/sentences/{sentence_id}', 'ReviewController@attachSentence');
 
 	Route::delete('{id}/sentences/{sentence_id}', 'ReviewController@detachSentence');

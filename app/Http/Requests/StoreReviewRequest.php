@@ -17,7 +17,7 @@ class StoreReviewRequest extends ApiRequest
     {
         return [
 	    'text' => 'required',
-	    'caption' => 'required',
+	    'caption' => 'nullable',
 	    'favorite' => 'required',
 
         ];
