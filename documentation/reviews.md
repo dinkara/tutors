@@ -23,8 +23,8 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": dolores (string),
-            "caption": nisi (string),
+            "text": qui (string),
+            "caption": culpa (string),
             "favorite": 1 (boolean),
 
     }
@@ -52,8 +52,8 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": velit (string),
-            "caption": qui (string),
+            "text": voluptatem (string),
+            "caption": aspernatur (string),
             "favorite": 1 (boolean),
 
     }

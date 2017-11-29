@@ -70,6 +70,7 @@ class Kernel extends HttpKernel
         'exists.student' => \App\Http\Middleware\StudentExists::class,    
         'exists.user' => \App\Http\Middleware\UserExists::class,    
         'owns.profile' => \App\Http\Middleware\ProfileOwner::class,    
+        'owns.review' => \App\Http\Middleware\ReviewOwner::class,    
         'owns.sentence' => \App\Http\Middleware\SentenceOwner::class,    
         'owns.student' => \App\Http\Middleware\StudentOwner::class,    
     
