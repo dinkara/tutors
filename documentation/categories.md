@@ -22,8 +22,8 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "name": maiores (string),
-            "color": itaque (string),
+            "name": aut (string),
+            "color": a (string),
 
     }
 + Response 201 (application/json)
@@ -50,7 +50,7 @@
     + Body
     {
             "name": expedita (string),
-            "color": est (string),
+            "color": atque (string),
 
     }
 + Response 200 (application/json)

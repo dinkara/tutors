@@ -21,7 +21,7 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": voluptatibus (string),
+            "text": magnam (string),
 
     }
 + Response 201 (application/json)
@@ -46,7 +46,7 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": quas (string),
+            "text": non (string),
 
     }
 + Response 200 (application/json)

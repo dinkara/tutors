@@ -28,12 +28,14 @@ class ReviewController extends ResourceController
     public function __construct(IReviewRepo $repo, ReviewTransformer $transformer, ISentenceRepo $sentenceRepo) {
         parent::__construct($repo, $transformer);
 	
-    
+        $this->middleware('owns.review', ['only' => ['update', 'destroy']]);
+
         $this->middleware('exists.review', ['only' => ['attachSentence', 'detachSentence']]);
     
         $this->middleware('exists.sentence:sentence_id,true', ['only' => ['attachSentence', 'detachSentence']]);
 
-    
+        $this->middleware('owns.review', ['only' => ['attachSentence', 'detachSentence']]);
+
     	$this->sentenceRepo = $sentenceRepo;
 
     }
@@ -49,7 +51,8 @@ class ReviewController extends ResourceController
     public function store(StoreReviewRequest $request)
     {       
             $data = $request->only($this->repo->getModel()->getFillable());
-	
+	    $data["user_id"] = JWTAuth::parseToken()->toUser()->id;   
+    
             return $this->storeItem($data);
     }
 
@@ -65,7 +68,8 @@ class ReviewController extends ResourceController
     public function update(UpdateReviewRequest $request, $id)
     {
             $data = $request->only($this->repo->getModel()->getFillable());
-	
+	    $data["user_id"] = JWTAuth::parseToken()->toUser()->id;   
+    
             return $this->updateItem($data, $id);
     }
     

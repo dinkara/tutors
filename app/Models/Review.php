@@ -25,7 +25,7 @@ class Review extends Model
      *
      * @var array
      */
-    protected $fillable = ['text', 'caption', 'favorite'];
+    protected $fillable = ['text', 'caption', 'favorite', 'user_id'];
     
     /**
      * The attributes that are will be shown in transformer
@@ -43,6 +43,10 @@ class Review extends Model
     public function students()
     {
         return $this->belongsToMany('App\Models\Student', 'students_reviews', 'review_id', 'student_id')->withTimestamps();
+    }
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User', 'user_id');
     }
 
 }
