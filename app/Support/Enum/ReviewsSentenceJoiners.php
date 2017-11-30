@@ -19,7 +19,7 @@ class ReviewsSentenceJoiners {
     const BUT = "but";
     const EVEN = "even";
     const HOWEVER = "however";
-    const ADDITIONALY = "additionaly";
+    const ADDITIONALLY = "additionally";
 
     
     public static function all() {
@@ -28,7 +28,7 @@ class ReviewsSentenceJoiners {
             self::BUT,
             self::EVEN,
             self::HOWEVER,
-            self::ADDITIONALY,
+            self::ADDITIONALLY,
 
         ];
     }
