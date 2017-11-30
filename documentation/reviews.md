@@ -17,15 +17,19 @@
         "text": 'required',
         "caption": 'required',
         "favorite": 'required',
+        "score": 'required',
+        "count": 'required',
 
     }
 + Request (application/json)
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": qui (string),
-            "caption": culpa (string),
-            "favorite": 1 (boolean),
+            "text": quisquam (string),
+            "caption": beatae (string),
+            "favorite": 0 (boolean),
+            "score": 17 (numeric),
+            "count": 16 (numeric),
 
     }
 + Response 201 (application/json)
@@ -46,15 +50,19 @@
         "text": 'required',
         "caption": 'required',
         "favorite": 'required',
+        "score": 'required',
+        "count": 'required',
 
     }
 + Request (application/json)
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": voluptatem (string),
-            "caption": aspernatur (string),
-            "favorite": 1 (boolean),
+            "text": quibusdam (string),
+            "caption": aut (string),
+            "favorite": 0 (boolean),
+            "score": 5 (numeric),
+            "count": 20 (numeric),
 
     }
 + Response 200 (application/json)

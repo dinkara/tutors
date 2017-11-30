@@ -74,5 +74,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\Student', 'user_id');
     }
+    public function supportTickets()
+    {
+        return $this->hasMany('App\Models\SupportTicket', 'user_id');
+    }
 
 }

@@ -35,6 +35,11 @@ Endpoints for Student resource are listed below
 
 <!-- include(students.md) -->
 
+# Group SupportTicket
+Endpoints for SupportTicket resource are listed below
+
+<!-- include(support_tickets.md) -->
+
 # Group User
 Endpoints for User resource are listed below
 

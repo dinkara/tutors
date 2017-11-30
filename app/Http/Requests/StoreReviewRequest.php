@@ -19,6 +19,8 @@ class StoreReviewRequest extends ApiRequest
 	    'text' => 'required',
 	    'caption' => 'required',
 	    'favorite' => 'required',
+	    'score' => 'required',
+	    'count' => 'required',
 
         ];
     }

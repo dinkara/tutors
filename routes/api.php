@@ -99,6 +99,25 @@ Route::middleware(['dinkoapi.auth', 'user.check.status'])->group(function (){
       ==================================*/
     
     /*==================================
+	SupportTicketController route section
+      ==================================*/
+    Route::group(['prefix' => 'supportTickets'], function(){
+	Route::get('paginate', 'SupportTicketController@paginate');
+
+
+    });   
+
+    Route::apiResource('supportTickets', 'SupportTicketController', [
+	'parameters' => [
+	    'supportTickets' => 'id'
+	]
+    ]);
+
+    /*==================================
+	End SupportTicketController route section
+      ==================================*/
+    
+    /*==================================
 	UserController route section
       ==================================*/
     Route::group(['prefix' => 'users'], function(){
