@@ -18,21 +18,21 @@ class Review extends Model
      *
      * @var array
      */
-    protected $searchableColumns = ['text', 'caption', 'favorite'];
+    protected $searchableColumns = ['text', 'caption', 'favorite', 'score', 'count'];
     
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['text', 'caption', 'favorite', 'user_id'];
+    protected $fillable = ['text', 'caption', 'favorite', 'user_id', 'score', 'count'];
     
     /**
      * The attributes that are will be shown in transformer
      *
      * @var array
      */
-    protected $displayable = ['text', 'caption', 'favorite', 'created_at'];
+    protected $displayable = ['text', 'caption', 'favorite', 'score', 'count'];
     
     public $timestamps = true;
     

@@ -23,8 +23,8 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "name": odio (string),
-            "nick": perspiciatis (string),
+            "name": laboriosam (string),
+            "nick": illo (string),
             "gender": enum1 (enum),
 
     }
@@ -52,8 +52,8 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "name": totam (string),
-            "nick": ratione (string),
+            "name": optio (string),
+            "nick": provident (string),
             "gender": enum1 (enum),
 
     }

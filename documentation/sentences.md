@@ -21,7 +21,7 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": magnam (string),
+            "text": totam (string),
 
     }
 + Response 201 (application/json)
@@ -46,7 +46,7 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": non (string),
+            "text": officia (string),
 
     }
 + Response 200 (application/json)

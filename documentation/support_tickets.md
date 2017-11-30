@@ -1,4 +1,4 @@
-## ======= [/categories]
+## ======= [/supportTickets]
 
 ### Get all items [GET]
 + Request (application/json)
@@ -7,57 +7,61 @@
     + Attributes         
         + success: true (boolean)
         + message: Ok (string)
-        + data: (array[Category, Category])
+        + data: (array[SupportTicket, SupportTicket])
 
 <!-- include(response/401.md) -->
 <!-- include(response/500.md) -->
 ### Create item [POST]
 + Request Rules:
     {
-        "name": 'required',
-        "color": 'required',
+        "title": 'required',
+        "category": 'required|in:'.SupportTicketCategories::stringify(),
+        "content": 'required',
 
     }
 + Request (application/json)
     <!-- include(request/header.md) -->
     + Body
     {
-            "name": ullam (string),
-            "color": sed (string),
+            "title": nam (string),
+            "category": enum1 (enum),
+            "content": fuga (string),
 
     }
 + Response 201 (application/json)
     + Attributes         
         + success: true (boolean)
-        + message: Category successfully created (string)
-        + data: (Category)
+        + message: SupportTicket successfully created (string)
+        + data: (SupportTicket)
 
 <!-- include(response/401.md) -->
 <!-- include(response/422.md) -->
 <!-- include(response/500.md) -->
 
-## ======= [/categories/{id}]
+## ======= [/supportTickets/{id}]
 ### Update item [PUT]
 <!-- include(parameters/id.md) -->
 + Request Rules:
     {
-        "name": 'required',
-        "color": 'required',
+        "title": 'required',
+        "category": 'required|in:'.SupportTicketCategories::stringify(),
+        "content": 'required',
 
     }
 + Request (application/json)
     <!-- include(request/header.md) -->
     + Body
     {
-            "name": atque (string),
-            "color": quisquam (string),
+            "title": consectetur (string),
+            "category": enum1 (enum),
+            "content": tempore (string),
 
     }
 + Response 200 (application/json)
     + Attributes         
         + success: true (boolean)
-        + message: Category successfully updated (string)
-        + data: (Category)
+        + message: SupportTicket successfully updated (string)
+        + data: (SupportTicket)
 
 <!-- include(response/401.md) -->
 <!-- include(response/404.md) -->
@@ -71,7 +75,7 @@
     + Attributes         
         + success: true (boolean)
         + message: Ok (string)
-        + data: (Category)
+        + data: (SupportTicket)
 
 <!-- include(response/401.md) -->
 <!-- include(response/404.md) -->
@@ -83,14 +87,14 @@
 + Response 200 (application/json)
     + Attributes         
         + success: true (boolean)
-        + message: Category successfully deleted (string)
+        + message: SupportTicket successfully deleted (string)
         + data: null
 
 <!-- include(response/401.md) -->
 <!-- include(response/404.md) -->
 <!-- include(response/500.md) -->
 
-## ======= [/categories/paginate?page={page}&pagination={pagination}]
+## ======= [/supportTickets/paginate?page={page}&pagination={pagination}]
 ### Paginated items [GET]
 <!-- include(parameters/pagination.md) -->
 + Request (application/json)
@@ -99,7 +103,7 @@
     + Attributes         
         + success: true (boolean)
         + message: Ok (string)
-        + data: (array[Category, Category])
+        + data: (array[SupportTicket, SupportTicket])
         + meta
             + pagination (Pagination)
 

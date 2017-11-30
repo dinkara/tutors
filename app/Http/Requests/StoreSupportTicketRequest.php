@@ -4,8 +4,9 @@ namespace App\Http\Requests;
 
 //use App\Models\{{model}};
 use Dinkara\DinkoApi\Http\Requests\ApiRequest;
+use App\Support\Enum\SupportTicketCategories;
 
-class UpdateReviewRequest extends ApiRequest
+class StoreSupportTicketRequest extends ApiRequest
 {
 
     /**
@@ -16,11 +17,9 @@ class UpdateReviewRequest extends ApiRequest
     public function rules()
     {
         return [
-	    'text' => 'required',
-	    'caption' => 'required',
-	    'favorite' => 'required',
-	    'score' => 'required',
-	    'count' => 'required',
+	    'title' => 'required',
+	    'category' => 'required|in:'.SupportTicketCategories::stringify(),
+	    'content' => 'required',
 
         ];
     }

@@ -68,11 +68,15 @@ class User extends Authenticatable
     }
     public function reviews()
     {
-        return $this->hasMany('App\Models\Review', 'user_id')->orderBy('created_at', 'desc');
+        return $this->hasMany('App\Models\Review', 'user_id')->orderBy('score', 'desc')->orderBy('created_at', 'desc');
     }
     public function students()
     {
         return $this->hasMany('App\Models\Student', 'user_id');
+    }
+    public function supportTickets()
+    {
+        return $this->hasMany('App\Models\SupportTicket', 'user_id');
     }
 
 }

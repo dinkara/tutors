@@ -9,26 +9,22 @@
 namespace App\Support\Enum;
 
 /**
- * Description of ReviewsSentenceJoiners
+ * Description of SupportTicketCategories
  *
  * @author Dinkic
  */
-class ReviewsSentenceJoiners {
+class SupportTicketCategories {
     
-    const AND = "and";
-    const BUT = "but";
-    const EVEN = "even";
-    const HOWEVER = "however";
-    const ADDITIONALY = "additionaly";
+    const BUG = "bug";
+    const IMPROVEMENT = "improvement";
+    const OTHER = "other";
 
     
     public static function all() {
         return [
-            self::AND,
-            self::BUT,
-            self::EVEN,
-            self::HOWEVER,
-            self::ADDITIONALY,
+            self::BUG,
+            self::IMPROVEMENT,
+            self::OTHER,
 
         ];
     }

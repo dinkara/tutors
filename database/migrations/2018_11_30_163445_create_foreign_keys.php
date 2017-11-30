@@ -49,6 +49,10 @@ class CreateForeignKeys extends Migration
             $table->foreign('review_id')->references('id')->on('reviews')->onDelete('cascade');
        
         });
+        Schema::table('support_tickets', function (Blueprint $table) {
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+       
+        });
         Schema::table('users_roles', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
@@ -102,6 +106,10 @@ class CreateForeignKeys extends Migration
         Schema::table('students_reviews', function (Blueprint $table) {
             $table->dropForeign(['student_id']);
             $table->dropForeign(['review_id']);
+
+        });
+        Schema::table('support_tickets', function (Blueprint $table) {
+            $table->dropForeign(['user_id']);
 
         });
         Schema::table('users_roles', function (Blueprint $table) {

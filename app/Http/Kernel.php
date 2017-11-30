@@ -68,11 +68,13 @@ class Kernel extends HttpKernel
         'exists.sentence' => \App\Http\Middleware\SentenceExists::class,    
         'exists.socialnetwork' => \App\Http\Middleware\SocialNetworkExists::class,    
         'exists.student' => \App\Http\Middleware\StudentExists::class,    
+        'exists.supportticket' => \App\Http\Middleware\SupportTicketExists::class,    
         'exists.user' => \App\Http\Middleware\UserExists::class,    
         'owns.profile' => \App\Http\Middleware\ProfileOwner::class,    
         'owns.review' => \App\Http\Middleware\ReviewOwner::class,    
         'owns.sentence' => \App\Http\Middleware\SentenceOwner::class,    
         'owns.student' => \App\Http\Middleware\StudentOwner::class,    
+        'owns.supportticket' => \App\Http\Middleware\SupportTicketOwner::class,    
     
     ];
 }

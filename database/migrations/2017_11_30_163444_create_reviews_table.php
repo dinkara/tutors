@@ -21,6 +21,8 @@ class CreateReviewsTable extends Migration
             $table->string('caption',150)->nullable('1');
             $table->boolean('favorite')->default();
             $table->integer('user_id')->unsigned();
+            $table->integer('score')->default('1');
+            $table->integer('count')->default()->unsigned('1');
              
         });
     }
