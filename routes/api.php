@@ -40,6 +40,7 @@ Route::middleware(['dinkoapi.auth', 'user.check.status'])->group(function (){
       ==================================*/
     Route::group(['prefix' => 'comments'], function(){
 	Route::get('paginate', 'CommentController@paginate');
+        Route::post('{id}/sentences', 'CommentController@attachSentences');
 	Route::post('{id}/sentences/{sentence_id}', 'CommentController@attachSentence');
 
 	Route::delete('{id}/sentences/{sentence_id}', 'CommentController@detachSentence');

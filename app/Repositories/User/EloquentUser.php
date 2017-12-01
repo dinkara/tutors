@@ -14,7 +14,7 @@ use App\Mail\ForgotPassword;
 use App\Support\Enum\UserStatuses;
 use App\Models\Role;
 use App\Models\SocialNetwork;
-
+use Illuminate\Support\Facades\Artisan;
 
 class EloquentUser extends EloquentRepo implements IUserRepo {
 
@@ -46,6 +46,8 @@ class EloquentUser extends EloquentRepo implements IUserRepo {
         if ($result && $sendEmail) {
             $this->sendConfirmationEmail();
         }
+        
+        Artisan::call('make:sentences', ['--userId' => $this->model->id]);
 
         return $this->finalize($result);
     }    

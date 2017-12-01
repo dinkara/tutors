@@ -17,7 +17,7 @@ class StoreCommentRequest extends ApiRequest
     {
         return [
 	    'text' => 'required',
-	    'caption' => 'required',
+	    'caption' => 'nullable',
 	    'favorite' => 'required',
 	    'score' => 'required',
 	    'count' => 'required',
