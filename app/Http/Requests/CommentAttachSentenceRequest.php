@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use Dinkara\DinkoApi\Http\Requests\ApiRequest;
-use App\Support\Enum\ReviewsSentenceJoiners;
+use App\Support\Enum\CommentsSentenceJoiners;
 
 class CommentAttachSentenceRequest extends ApiRequest
 {
@@ -17,7 +17,7 @@ class CommentAttachSentenceRequest extends ApiRequest
     {
 	return [
 	    'order' => 'required',
-	    'joiner' => 'required|in:'.ReviewsSentenceJoiners::stringify(),
+	    'joiner' => 'required|in:'.CommentsSentenceJoiners::stringify(),
 
         ];
     }

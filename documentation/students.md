@@ -23,8 +23,8 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "name": doloribus (string),
-            "nick": magni (string),
+            "name": repellat (string),
+            "nick": omnis (string),
             "gender": enum1 (enum),
 
     }
@@ -52,8 +52,8 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "name": sunt (string),
-            "nick": molestias (string),
+            "name": nemo (string),
+            "nick": consequatur (string),
             "gender": enum1 (enum),
 
     }
