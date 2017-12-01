@@ -18,7 +18,7 @@ class Sentence extends Model
      *
      * @var array
      */
-    protected $searchableColumns = ['text' => 15];
+    protected $searchableColumns = ['text'];
     
     /**
      * The attributes that are mass assignable.
@@ -44,9 +44,9 @@ class Sentence extends Model
     {
         return $this->belongsTo('App\Models\User', 'user_id');
     }
-    public function reviews()
+    public function comments()
     {
-        return $this->belongsToMany('App\Models\Review', 'reviews_sentences', 'sentence_id', 'review_id')->withTimestamps()->withPivot('order', 'joiner');
+        return $this->belongsToMany('App\Models\Comment', 'comments_sentences', 'sentence_id', 'review_id')->withTimestamps()->withPivot('order', 'joiner');
     }
 
 }

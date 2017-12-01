@@ -20,10 +20,10 @@ Endpoints for Category resource are listed below
 
 <!-- include(categories.md) -->
 
-# Group Review
-Endpoints for Review resource are listed below
+# Group Comment
+Endpoints for Comment resource are listed below
 
-<!-- include(reviews.md) -->
+<!-- include(comments.md) -->
 
 # Group Sentence
 Endpoints for Sentence resource are listed below

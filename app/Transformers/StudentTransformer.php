@@ -12,7 +12,7 @@ use Dinkara\DinkoApi\Transformers\ApiTransformer;
 class StudentTransformer extends ApiTransformer{
     
     protected $defaultIncludes = [];
-    protected $availableIncludes = ['user', 'reviews'];
+    protected $availableIncludes = ['user', 'comments'];
     protected $pivotAttributes = [];
     
     /**
@@ -29,9 +29,9 @@ class StudentTransformer extends ApiTransformer{
     { 
        return $this->item($item->user, new UserTransformer());
     }
-    public function includeReviews(Student $item)
+    public function includeComments(Student $item)
     {
-       return $this->collection($item->reviews, new ReviewTransformer());
+       return $this->collection($item->comments, new CommentTransformer());
     }
 
 

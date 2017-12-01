@@ -21,7 +21,7 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": totam (string),
+            "text": maiores (string),
 
     }
 + Response 201 (application/json)
@@ -46,7 +46,7 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": officia (string),
+            "text": ea (string),
 
     }
 + Response 200 (application/json)

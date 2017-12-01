@@ -12,7 +12,7 @@ use Dinkara\DinkoApi\Transformers\ApiTransformer;
 class UserTransformer extends ApiTransformer{
     
     protected $defaultIncludes = ['profile'];
-    protected $availableIncludes = ['sentences', 'reviews', 'students', 'supportTickets', 'roles', 'socialNetworks'];
+    protected $availableIncludes = ['sentences', 'comments', 'students', 'supportTickets', 'roles', 'socialNetworks'];
     protected $pivotAttributes = ['access_token', 'provider_id'];
     
     /**
@@ -33,9 +33,9 @@ class UserTransformer extends ApiTransformer{
     {
        return $this->collection($item->sentences, new SentenceTransformer());
     }
-    public function includeReviews(User $item)
+    public function includeComments(User $item)
     {
-       return $this->collection($item->reviews, new ReviewTransformer());
+       return $this->collection($item->comments, new CommentTransformer());
     }
     public function includeStudents(User $item)
     {

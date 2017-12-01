@@ -4,7 +4,7 @@ namespace App\Repositories\Student;
 
 use Dinkara\RepoBuilder\Repositories\EloquentRepo;
 use App\Models\Student;
-use App\Models\Review;
+use App\Models\Comment;
 
 
 
@@ -22,23 +22,23 @@ class EloquentStudent extends EloquentRepo implements IStudentRepo {
         return new Student;
     }
     
-    public function attachReview(Review $model, array $data = []){
+    public function attachComment(Comment $model, array $data = []){
         if (!$this->model) {
             return false;
         }	
 
-	$result = $this->model->reviews()->attach($model, $data);
+	$result = $this->model->comments()->attach($model, $data);
         
         return $this->finalize($this->model);
     }
 
 
-    public function detachReview(Review $model){
+    public function detachComment(Comment $model){
         if (!$this->model) {
             return false;
         }
 	
-	$result = $this->model->reviews()->detach($model);
+	$result = $this->model->comments()->detach($model);
         
         return $this->finalize($this->model);
     }

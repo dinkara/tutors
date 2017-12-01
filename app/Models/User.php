@@ -66,9 +66,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\Sentence', 'user_id');
     }
-    public function reviews()
+    public function comments()
     {
-        return $this->hasMany('App\Models\Review', 'user_id')->orderBy('score', 'desc')->orderBy('created_at', 'desc');
+        return $this->hasMany('App\Models\Comment', 'user_id');
     }
     public function students()
     {

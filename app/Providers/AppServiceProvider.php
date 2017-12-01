@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $models = array('Category', 'PasswordReset', 'Profile', 'Review', 'ReviewsSentence', 'Role', 'Sentence', 'SentencesCategory', 'SocialNetwork', 'Student', 'StudentsReview', 'SupportTicket', 'User', 'UsersRole', 'UsersSocialNetwork');
+        $models = array('Category', 'Comment', 'CommentsSentence', 'PasswordReset', 'Profile', 'Role', 'Sentence', 'SentencesCategory', 'SocialNetwork', 'Student', 'StudentsComment', 'SupportTicket', 'User', 'UsersRole', 'UsersSocialNetwork');
         /*  'User',
             'Role',
             'Profile',

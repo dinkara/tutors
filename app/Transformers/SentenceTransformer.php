@@ -12,7 +12,7 @@ use Dinkara\DinkoApi\Transformers\ApiTransformer;
 class SentenceTransformer extends ApiTransformer{
     
     protected $defaultIncludes = [];
-    protected $availableIncludes = ['user', 'categories', 'reviews'];
+    protected $availableIncludes = ['user', 'categories', 'comments'];
     protected $pivotAttributes = ['order', 'joiner'];
     
     /**
@@ -33,9 +33,9 @@ class SentenceTransformer extends ApiTransformer{
     {
        return $this->collection($item->categories, new CategoryTransformer());
     }
-    public function includeReviews(Sentence $item)
+    public function includeComments(Sentence $item)
     {
-       return $this->collection($item->reviews, new ReviewTransformer());
+       return $this->collection($item->comments, new CommentTransformer());
     }
 
 

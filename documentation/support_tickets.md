@@ -23,9 +23,9 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "title": nam (string),
+            "title": quasi (string),
             "category": enum1 (enum),
-            "content": fuga (string),
+            "content": quae (string),
 
     }
 + Response 201 (application/json)
@@ -52,9 +52,9 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "title": consectetur (string),
+            "title": adipisci (string),
             "category": enum1 (enum),
-            "content": tempore (string),
+            "content": eum (string),
 
     }
 + Response 200 (application/json)
