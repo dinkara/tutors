@@ -36,9 +36,9 @@ class Student extends Model
     
     public $timestamps = true;
     
-    public function reviews()
+    public function comments()
     {
-        return $this->belongsToMany('App\Models\Review', 'students_reviews', 'student_id', 'review_id')->withTimestamps();
+        return $this->belongsToMany('App\Models\Comment', 'students_comments', 'student_id', 'review_id')->withTimestamps();
     }
     public function user()
     {

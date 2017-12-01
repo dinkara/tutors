@@ -36,25 +36,24 @@ Route::middleware(['dinkoapi.auth', 'user.check.status'])->group(function (){
       ==================================*/
     
     /*==================================
-	ReviewController route section
+	CommentController route section
       ==================================*/
-    Route::group(['prefix' => 'reviews'], function(){
-	Route::get('paginate', 'ReviewController@paginate');
-        Route::post('{id}/sentences', 'ReviewController@attachSentences');
-	Route::post('{id}/sentences/{sentence_id}', 'ReviewController@attachSentence');
+    Route::group(['prefix' => 'comments'], function(){
+	Route::get('paginate', 'CommentController@paginate');
+	Route::post('{id}/sentences/{sentence_id}', 'CommentController@attachSentence');
 
-	Route::delete('{id}/sentences/{sentence_id}', 'ReviewController@detachSentence');
+	Route::delete('{id}/sentences/{sentence_id}', 'CommentController@detachSentence');
 
     });   
 
-    Route::apiResource('reviews', 'ReviewController', [
+    Route::apiResource('comments', 'CommentController', [
 	'parameters' => [
-	    'reviews' => 'id'
+	    'comments' => 'id'
 	]
     ]);
 
     /*==================================
-	End ReviewController route section
+	End CommentController route section
       ==================================*/
     
     /*==================================
@@ -83,9 +82,9 @@ Route::middleware(['dinkoapi.auth', 'user.check.status'])->group(function (){
       ==================================*/
     Route::group(['prefix' => 'students'], function(){
 	Route::get('paginate', 'StudentController@paginate');
-	Route::post('{id}/reviews/{review_id}', 'StudentController@attachReview');
+	Route::post('{id}/comments/{review_id}', 'StudentController@attachComment');
 
-	Route::delete('{id}/reviews/{review_id}', 'StudentController@detachReview');
+	Route::delete('{id}/comments/{review_id}', 'StudentController@detachComment');
 
     });   
 

@@ -3,7 +3,7 @@
 namespace App\Repositories\Student;
 
 use Dinkara\RepoBuilder\Repositories\IRepo;
-use App\Models\Review;
+use App\Models\Comment;
 
 /**
  * Interface StudentRepository
@@ -11,10 +11,10 @@ use App\Models\Review;
  */
 interface IStudentRepo extends IRepo {
    
-    function attachReview(Review $model, array $data = []);
+    function attachComment(Comment $model, array $data = []);
 
 
-    function detachReview(Review $model);
+    function detachComment(Comment $model);
 
 
 }

@@ -9,8 +9,8 @@ use App\Transformers\StudentTransformer;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Dinkara\DinkoApi\Http\Controllers\ResourceController;
 use ApiResponse;
-use App\Http\Requests\StudentAttachReviewRequest;
-use App\Repositories\Review\IReviewRepo;
+use App\Http\Requests\StudentAttachCommentRequest;
+use App\Repositories\Comment\ICommentRepo;
 
 
 /**
@@ -20,23 +20,23 @@ class StudentController extends ResourceController
 {
 
     /**
-     * @var IReviewRepo 
+     * @var ICommentRepo 
      */
-    private $reviewRepo;
+    private $commentRepo;
         
     
-    public function __construct(IStudentRepo $repo, StudentTransformer $transformer, IReviewRepo $reviewRepo) {
+    public function __construct(IStudentRepo $repo, StudentTransformer $transformer, ICommentRepo $commentRepo) {
         parent::__construct($repo, $transformer);
 	
         $this->middleware('owns.student', ['only' => ['update', 'destroy']]);
 
-        $this->middleware('exists.student', ['only' => ['attachReview', 'detachReview']]);
+        $this->middleware('exists.student', ['only' => ['attachComment', 'detachComment']]);
     
-        $this->middleware('exists.review:review_id,true', ['only' => ['attachReview', 'detachReview']]);
+        $this->middleware('exists.comment:review_id,true', ['only' => ['attachComment', 'detachComment']]);
 
-        $this->middleware('owns.student', ['only' => ['attachReview', 'detachReview']]);
+        $this->middleware('owns.student', ['only' => ['attachComment', 'detachComment']]);
 
-    	$this->reviewRepo = $reviewRepo;
+    	$this->commentRepo = $commentRepo;
 
     }
     
@@ -74,39 +74,39 @@ class StudentController extends ResourceController
     }
     
     /**
-     * Attach Review
+     * Attach Comment
      *
-     * Attach the Review to existing resource.
+     * Attach the Comment to existing resource.
      *
-     * @param  App\Http\Requests\StudentAttachReviewRequest  $request
+     * @param  App\Http\Requests\StudentAttachCommentRequest  $request
      * @param  int  $id
      * @param  int  $review_id
      * @return \Illuminate\Http\Response
      */
-    public function attachReview(StudentAttachReviewRequest $request, $id, $review_id)
+    public function attachComment(StudentAttachCommentRequest $request, $id, $review_id)
     {
             $data = $request->only(array_keys($request->rules()));
 	    	
-	    $model = $this->reviewRepo->find($review_id)->getModel();
+	    $model = $this->commentRepo->find($review_id)->getModel();
 
-            return ApiResponse::ItemAttached($this->repo->find($id)->attachReview($model, $data)->getModel(), $this->transformer);
+            return ApiResponse::ItemAttached($this->repo->find($id)->attachComment($model, $data)->getModel(), $this->transformer);
     }
 
     
     /**
-     * Detach Review
+     * Detach Comment
      *
-     * Detach the Review from existing resource.
+     * Detach the Comment from existing resource.
      *
-     * @param  App\Http\Requests\StudentAttachReviewRequest  $request
+     * @param  App\Http\Requests\StudentAttachCommentRequest  $request
      * @param  int  $id
      * @param  int  $review_id
      * @return \Illuminate\Http\Response
      */
-    public function detachReview($id, $review_id)
+    public function detachComment($id, $review_id)
     {	    	
-	$model = $this->reviewRepo->find($review_id)->getModel();
-        return ApiResponse::ItemDetached($this->repo->find($id)->detachReview($model)->getModel());
+	$model = $this->commentRepo->find($review_id)->getModel();
+        return ApiResponse::ItemDetached($this->repo->find($id)->detachComment($model)->getModel());
     }
 
 }
