@@ -23,9 +23,9 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "title": quasi (string),
+            "title": corrupti (string),
             "category": enum1 (enum),
-            "content": quae (string),
+            "content": alias (string),
 
     }
 + Response 201 (application/json)
@@ -52,9 +52,9 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "title": adipisci (string),
+            "title": eveniet (string),
             "category": enum1 (enum),
-            "content": eum (string),
+            "content": nisi (string),
 
     }
 + Response 200 (application/json)

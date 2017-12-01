@@ -21,7 +21,7 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": maiores (string),
+            "text": maxime (string),
 
     }
 + Response 201 (application/json)
@@ -46,7 +46,7 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": ea (string),
+            "text": expedita (string),
 
     }
 + Response 200 (application/json)

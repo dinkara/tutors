@@ -25,11 +25,11 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": est (string),
-            "caption": laborum (string),
-            "favorite": 1 (boolean),
-            "score": 9 (numeric),
-            "count": 13 (numeric),
+            "text": deserunt (string),
+            "caption": corrupti (string),
+            "favorite": 0 (boolean),
+            "score": 19 (numeric),
+            "count": 20 (numeric),
 
     }
 + Response 201 (application/json)
@@ -58,11 +58,11 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "text": aperiam (string),
-            "caption": laboriosam (string),
-            "favorite": 0 (boolean),
-            "score": 7 (numeric),
-            "count": 13 (numeric),
+            "text": ea (string),
+            "caption": quis (string),
+            "favorite": 1 (boolean),
+            "score": 14 (numeric),
+            "count": 6 (numeric),
 
     }
 + Response 200 (application/json)

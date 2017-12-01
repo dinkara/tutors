@@ -22,8 +22,8 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "name": qui (string),
-            "color": nihil (string),
+            "name": itaque (string),
+            "color": officiis (string),
 
     }
 + Response 201 (application/json)
@@ -49,8 +49,8 @@
     <!-- include(request/header.md) -->
     + Body
     {
-            "name": minus (string),
-            "color": neque (string),
+            "name": dicta (string),
+            "color": consequuntur (string),
 
     }
 + Response 200 (application/json)
