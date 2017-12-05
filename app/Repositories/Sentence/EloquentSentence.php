@@ -6,7 +6,7 @@ use Dinkara\RepoBuilder\Repositories\EloquentRepo;
 use App\Models\Sentence;
 use App\Models\Category;
 
-
+use DB;
 
 class EloquentSentence extends EloquentRepo implements ISentenceRepo {
 
@@ -24,7 +24,7 @@ class EloquentSentence extends EloquentRepo implements ISentenceRepo {
     
     public function searchByText($text){
         $this->initialize();        
-        return $this->model()->where('text', 'like' , "%$text%")->orderBy('created_at', 'desc')->get();
+        return $this->model()->select(DB::raw("min(id) as id"), "text")->where('text', 'like' , "%$text%")->groupBy("text")->get();
     }
     
     public function attachCategory(Category $model, array $data = []){

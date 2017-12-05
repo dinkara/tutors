@@ -3,7 +3,7 @@
         Options -MultiViews -Indexes
     </IfModule>
 
-    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Origin "https://beta.blablacommentz.com"
     Header set Access-Control-Allow-Headers "origin, x-requested-with, content-type, authorization"
     Header set Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
 
