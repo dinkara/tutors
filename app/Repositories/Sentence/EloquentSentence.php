@@ -22,6 +22,11 @@ class EloquentSentence extends EloquentRepo implements ISentenceRepo {
         return new Sentence;
     }
     
+    public function searchByText($text){
+        $this->initialize();        
+        return $this->model()->where('text', 'like' , "%$text%")->orderBy('created_at', 'desc')->get();
+    }
+    
     public function attachCategory(Category $model, array $data = []){
         if (!$this->model) {
             return false;

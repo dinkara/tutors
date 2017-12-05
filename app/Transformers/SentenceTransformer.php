@@ -11,8 +11,8 @@ use Dinkara\DinkoApi\Transformers\ApiTransformer;
  */
 class SentenceTransformer extends ApiTransformer{
     
-    protected $defaultIncludes = [];
-    protected $availableIncludes = ['user', 'categories', 'comments'];
+    protected $defaultIncludes = ['categories'];
+    protected $availableIncludes = ['user', 'comments'];
     protected $pivotAttributes = ['order', 'joiner'];
     
     /**

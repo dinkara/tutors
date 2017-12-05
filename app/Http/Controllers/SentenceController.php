@@ -57,6 +57,24 @@ class SentenceController extends ResourceController
     }
 
     /**
+     * Search sentences
+     * 
+     * Search sentences by their text
+     * 
+     * @param \App\Http\Controllers\StoreSentenceRequest $request
+     * @return \Illuminate\Http\Response
+     */
+    public function search(StoreSentenceRequest $request){
+        $data = $request->only(array_keys($request->rules()));
+        
+        try {            
+            return ApiResponse::Collection($this->repo->searchByText($data["text"]), $this->transformer);
+        } catch (QueryException $e) {
+            return ApiResponse::InternalError($e->getMessage());
+        }        
+    }
+    
+    /**
      * Update item 
      * 
      * Update the specified item in storage.

@@ -62,6 +62,7 @@ Route::middleware(['dinkoapi.auth', 'user.check.status'])->group(function (){
       ==================================*/
     Route::group(['prefix' => 'sentences'], function(){
 	Route::get('paginate', 'SentenceController@paginate');
+        Route::post('search', 'SentenceController@search');
 	Route::post('{id}/categories/{category_id}', 'SentenceController@attachCategory');
 
 	Route::delete('{id}/categories/{category_id}', 'SentenceController@detachCategory');
@@ -124,11 +125,11 @@ Route::middleware(['dinkoapi.auth', 'user.check.status'])->group(function (){
     Route::group(['prefix' => 'users'], function(){
         Route::get("/me", 'UserController@me');
         Route::put("/", 'UserController@update');
-	Route::post('roles/{role_id}', 'UserController@attachRole');
-	Route::post('socialNetworks/{social_network_id}', 'UserController@attachSocialNetwork');
-
-	Route::delete('roles/{role_id}', 'UserController@detachRole');
-	Route::delete('socialNetworks/{social_network_id}', 'UserController@detachSocialNetwork');
+//	Route::post('roles/{role_id}', 'UserController@attachRole');
+//	Route::post('socialNetworks/{social_network_id}', 'UserController@attachSocialNetwork');
+//
+//	Route::delete('roles/{role_id}', 'UserController@detachRole');
+//	Route::delete('socialNetworks/{social_network_id}', 'UserController@detachSocialNetwork');
 
     });
 

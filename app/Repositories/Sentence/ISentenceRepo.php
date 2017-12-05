@@ -11,6 +11,8 @@ use App\Models\Category;
  */
 interface ISentenceRepo extends IRepo {
    
+    function searchByText($text);
+    
     function attachCategory(Category $model, array $data = []);
 
 

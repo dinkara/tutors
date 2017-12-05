@@ -64,11 +64,11 @@ class User extends Authenticatable
     }
     public function sentences()
     {
-        return $this->hasMany('App\Models\Sentence', 'user_id');
+        return $this->hasMany('App\Models\Sentence', 'user_id')->orderBy('created_at', 'desc');
     }
     public function comments()
     {
-        return $this->hasMany('App\Models\Comment', 'user_id')->orderBy('score')->orderBy('created_at');
+        return $this->hasMany('App\Models\Comment', 'user_id')->orderBy('score', 'desc')->orderBy('created_at', 'desc');
     }
     public function students()
     {
