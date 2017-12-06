@@ -150,7 +150,7 @@ class AuthController extends ApiController {
                                 ->attachRole($this->roleRepo->findByName(RoleTypes::USER)->getModel())
                                 ->attachSocialNetwork($this->socialNetworkRepo->findByName($network)->getModel(), $socialData);
                 
-                $profileData = ["user_id" => $this->userRepo->getModel()->id, "name" => $user->name];                
+                $profileData = ["user_id" => $this->userRepo->getModel()->id, "name" => $user->name, "nick" => "Teacher ". $user->name];                
                 $this->profileRepo->create($profileData);
                 $userFacebook = $this->socialNetworkRepo->findBySocialId($user->id, $network);
             }

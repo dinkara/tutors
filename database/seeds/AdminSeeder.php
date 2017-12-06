@@ -23,7 +23,7 @@ class AdminSeeder extends Seeder
         ];
         for($i=0; $i < count($admins); $i++){
             $userRepo->create($admins[$i])->attachRole($roleRepo->findByName(RoleTypes::ADMIN)->getModel());
-            $profileData = ["user_id" => $userRepo->getModel()->id, "name" => "Nikola"];                
+            $profileData = ["user_id" => $userRepo->getModel()->id, "name" => "Nikola", "nick" => "Teacher Dz"];                
             $profileRepo->create($profileData);
         }
     }
