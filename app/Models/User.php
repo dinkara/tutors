@@ -22,7 +22,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = ['email', 'password', 'confirmation_code', 'status', 'password_updated'];
+    protected $fillable = ['email', 'password', 'confirmation_code', 'status', 'password_updated', 'last_login'];
 
     /**
      * The attributes that are will be shown in transformer
