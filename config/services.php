@@ -35,8 +35,8 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
     'facebook' => [
-        'client_id' => env('FACEBOOK_CLIENT_ID', '822600857751391'),
-        'client_secret' => env('FACEBOOK_CLIENT_SECRET', 'aacd6323495ae1371036379f44a06c63'),
+        'client_id' => env('FACEBOOK_CLIENT_ID', '516738055355291'),
+        'client_secret' => env('FACEBOOK_CLIENT_SECRET', '56c416031064289e1c5f628477c4478e'),
         'redirect' => env('FACEBOOK_CLIENT_REDIRECT', 'http://localhost:8080/'),
     ],
     'google' => [

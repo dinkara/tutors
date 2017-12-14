@@ -2,46 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/wamp/www/tutors_api/routes/channels.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Http/Requests/StoreUserRequest.php</file>
-            <file>file:/C:/wamp/www/tutors_api/database/seeds/SentenceSeeder.php</file>
-            <file>file:/C:/wamp/www/tutors_api/config/cache.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Http/Controllers/Auth/AuthController.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Repositories/Sentence/EloquentSentence.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Http/Requests/StoreSupportTicketRequest.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Http/Requests/UserAttachSocialNetworkRequest.php</file>
-            <file>file:/C:/wamp/www/tutors_api/config/app.php</file>
-            <file>file:/C:/wamp/www/tutors_api/storage/logs/laravel.log</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Console/Commands/UserSentenceSeeder.php</file>
-            <file>file:/C:/wamp/www/tutors_api/config/mail.php</file>
-            <file>file:/C:/wamp/www/tutors_api/routes/api.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Http/Requests/StoreCommentRequest.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Models/Comment.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Transformers/CommentTransformer.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Console/Commands/JWTGenerateCommand.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Support/Enum/SupportTicketCategories.php</file>
-            <file>file:/C:/wamp/www/tutors_api/config/services.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Support/Enum/UserStatuses.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Repositories/User/EloquentUser.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Transformers/SentenceTransformer.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Http/Controllers/SentenceController.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Http/Requests/CommentAttachSentencesRequest.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Console/Kernel.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Http/Controllers/CategoryController.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Http/Requests/StoreSentenceRequest.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Http/Requests/UpdateProfileRequest.php</file>
-            <file>file:/C:/wamp/www/tutors_api/database/seeds/DatabaseSeeder.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Models/User.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Http/Controllers/CommentController.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Providers/AppServiceProvider.php</file>
-            <file>file:/C:/wamp/www/tutors_api/config/jwt.php</file>
-            <file>file:/C:/wamp/www/tutors_api/database/seeds/AdminSeeder.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Http/Controllers/UserController.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Models/Sentence.php</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Transformers/UserTransformer.php</file>
-            <file>file:/C:/wamp/www/tutors_api/public/.htaccess</file>
-            <file>file:/C:/wamp/www/tutors_api/app/Repositories/Sentence/ISentenceRepo.php</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
