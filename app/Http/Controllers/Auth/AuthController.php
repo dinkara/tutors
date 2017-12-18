@@ -19,6 +19,7 @@ use App\Support\Enum\SocialNetworks;
 use Socialite;
 use Lang;
 use ApiResponse;
+use Carbon\Carbon;
 
 /**
  * @resource Auth
@@ -94,7 +95,7 @@ class AuthController extends ApiController {
         if($user->passwordReset){
             return ApiResponse::Unauthorized(Lang::get('passwords.reset_password_requested'));
         }
-
+        $user->update(["last_login" => Carbon::now()]);
         return ApiResponse::Token(compact('token'));
     }
     
@@ -163,7 +164,7 @@ class AuthController extends ApiController {
                 //todo Refactor                
                 $userFacebook->getModel()->pivot->update($socialData);
             }
-
+            $this->userRepo->getModel()->update(["last_login" => Carbon::now()]);
             $token = JWTAuth::fromUser($this->userRepo->getModel());
             return ApiResponse::Token(compact('token'));
         } catch (QueryException $e) {
