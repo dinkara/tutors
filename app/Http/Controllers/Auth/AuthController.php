@@ -95,7 +95,7 @@ class AuthController extends ApiController {
         if($user->passwordReset){
             return ApiResponse::Unauthorized(Lang::get('passwords.reset_password_requested'));
         }
-        $user->update(["last_login" => Carbon::now()]);
+        $this->updateLastLogin($user->id);
         return ApiResponse::Token(compact('token'));
     }
     
@@ -164,7 +164,7 @@ class AuthController extends ApiController {
                 //todo Refactor                
                 $userFacebook->getModel()->pivot->update($socialData);
             }
-            $this->userRepo->getModel()->update(["last_login" => Carbon::now()]);
+            $this->updateLastLogin($this->userRepo->getModel()->id);
             $token = JWTAuth::fromUser($this->userRepo->getModel());
             return ApiResponse::Token(compact('token'));
         } catch (QueryException $e) {
@@ -243,6 +243,10 @@ class AuthController extends ApiController {
             return ApiResponse::SuccessMessage(Lang::get('auth.success_confirmation'));
         else
             return ApiResponse::Unauthorized(Lang::get('auth.invalid_code'));
+    }
+	
+    private function updateLastLogin($userId) {
+        $user = $this->userRepo->find($userId)->update(["last_login" => Carbon::now()]);
     }
 
 }
