@@ -3,7 +3,10 @@
         Options -MultiViews -Indexes
     </IfModule>
 
-    Header set Access-Control-Allow-Origin "https://beta.blablacommentz.com"
+	SetEnvIfNoCase Origin "https?://(www\.)?(blablacommentz\.com|beta\.blablacommentz\.com)(:\d+)?$" ACAO=$0
+   Header set Access-Control-Allow-Origin %{ACAO}e env=ACAO
+	Header merge  Vary "Origin"
+
     Header set Access-Control-Allow-Headers "origin, x-requested-with, content-type, authorization"
     Header set Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
 
