@@ -266,6 +266,23 @@ class EloquentUser extends EloquentRepo implements IUserRepo {
         return $this->finalize($this->model);
     }
 
+    public function commentsHistory($perPage = 6) {
+        if (!$this->model) {
+            return false;
+        }
+        
+        $result = $this->model->comments()->where("favorite", 0)->paginate($perPage);                
+        
+        return $result;
+    }
 
-
+    public function favoriteComments($perPage = 6) {
+        if (!$this->model) {
+            return false;
+        }
+        
+        $result = $this->model->comments()->where("favorite", 1)->paginate($perPage);                
+        
+        return $result;
+    }
 }

@@ -133,5 +133,4 @@ class CommentController extends ResourceController
 	$model = $this->sentenceRepo->find($sentence_id)->getModel();
         return ApiResponse::ItemDetached($this->repo->find($id)->detachSentence($model)->getModel());
     }
-
 }

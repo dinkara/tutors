@@ -124,6 +124,8 @@ Route::middleware(['dinkoapi.auth', 'user.check.status'])->group(function (){
       ==================================*/
     Route::group(['prefix' => 'users'], function(){
         Route::get("/me", 'UserController@me');
+        Route::get("/me/comments/history", 'UserController@commentsHistory');
+        Route::get("/me/comments/favorite", 'UserController@favoriteComments');
         Route::put("/", 'UserController@update');
 //	Route::post('roles/{role_id}', 'UserController@attachRole');
 //	Route::post('socialNetworks/{social_network_id}', 'UserController@attachSocialNetwork');

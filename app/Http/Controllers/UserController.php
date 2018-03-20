@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Repositories\User\IUserRepo;
 use App\Repositories\Profile\IProfileRepo;
 use App\Transformers\UserTransformer;
+use App\Transformers\CommentTransformer;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Dinkara\DinkoApi\Http\Controllers\ResourceController;
 use App\Http\Requests\UpdateProfileRequest;
@@ -162,6 +164,57 @@ class UserController extends ResourceController
 	$model = $this->socialNetworkRepo->find($social_network_id)->getModel();
         $user = JWTAuth::parseToken()->toUser();
         return ApiResponse::ItemDetached($this->repo->find($user->id)->detachSocialNetwork($model)->getModel());
+    }
+    
+    
+    /**
+     * Get paginated list of history comments
+     *
+     * Retrieve paginated history of comments for logged in user
+     *          
+     * @param  Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function commentsHistory(Request $request)
+    {	    		        
+        try{
+            $user = JWTAuth::parseToken()->toUser(); 
+            $this->repo->find($user->id);
+            if($pagination = $request->pagination){
+                return ApiResponse::Pagination($this->repo->commentsHistory($pagination), new CommentTransformer);
+            }
+            else{
+                return ApiResponse::Pagination($this->repo->commentsHistory(), new CommentTransformer);
+            }               
+        } catch (QueryException $e) {
+            return ApiResponse::InternalError($e->getMessage());
+        } 
+        
+    }
+    
+    /**
+     * Get paginated list of favorite comments
+     *
+     * Retrieve paginated favorite of comments for logged in user
+     *          
+     * @param  Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function favoriteComments(Request $request)
+    {	    		        
+        try{
+            $user = JWTAuth::parseToken()->toUser(); 
+            $this->repo->find($user->id);
+            if($pagination = $request->pagination){
+                return ApiResponse::Pagination($this->repo->favoriteComments($pagination), new CommentTransformer);
+            }
+            else{
+                return ApiResponse::Pagination($this->repo->favoriteComments(), new CommentTransformer);
+            }               
+        } catch (QueryException $e) {
+            return ApiResponse::InternalError($e->getMessage());
+        } 
+        
     }
 
 }

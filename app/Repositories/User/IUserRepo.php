@@ -99,5 +99,5 @@ interface IUserRepo extends IRepo {
 
     function detachSocialNetwork(SocialNetwork $model);
 
-
+    function commentsHistory($perPage = 6);
 }
